@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.home{
+   /* background-image: url('https://source.unsplash.com/random');*/
+    background-image: url('pexels-jakub-novacek-924824.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin: auto;
+    width: 40rem;
+    height: 30rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    position:absolute;
+    z-index: 1;
+    background: inherit;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    top: 20%;
+    left: 45%;
+    transform: translateX(-45%);
+
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    inset: 0;
+    filter: blur(10px);
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev{
+    position: absolute;
+    top: 50%;
+    left:15%;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.next{
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width:800px){
+    .container{
+        width: 80%;
+        height: 50%;
+        top: 30%;
+    }
+    
+    .next{
+        position: absolute;
+        right: 0;
+        
+    }
+
+    .prev{
+        left: 0;
+    }
+
+    
+    .home{
+        padding-top: 250px;
+    }
+
+
+}
+
+.container q{
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.author{
+    margin-bottom: auto;
+    width: 100%;
+    text-align: right;
+    margin-right: 55px;
+    cursor: pointer;
+    
+}
